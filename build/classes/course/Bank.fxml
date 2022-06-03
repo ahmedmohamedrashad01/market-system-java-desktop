@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.BankController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="579.0" layoutY="26.0" prefHeight="40.0" prefWidth="245.0" style="-fx-border-color: #fff;" text="نظام التعاملات البنكيه" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="121.0" layoutY="178.0" prefHeight="355.0" prefWidth="377.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #fff;" text="قائمة السحب" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="81.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="ادخل المبلغ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtWithdrawal" alignment="CENTER" focusColor="#75b8cc" layoutX="22.0" layoutY="80.0" prefHeight="40.0" prefWidth="189.0" promptText="من فضلك ادخل المبلغ" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#75b8cc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="dateWithdrawal" defaultColor="#080394" layoutX="18.0" layoutY="180.0" prefHeight="36.0" prefWidth="198.0" style="-fx-border-color: #fff; -fx-font-size: 13px; -fx-font-weight: bold;">
+                     <padding>
+                        <Insets left="65.0" right="10.0" />
+                     </padding>
+                  </JFXDatePicker>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="178.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="تاريخ السحب" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnWithdrawal" buttonType="RAISED" layoutX="119.0" layoutY="277.0" onAction="#btnWithdrawalAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حفظ" textFill="#cd0909">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="905.0" layoutY="178.0" prefHeight="355.0" prefWidth="377.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #fff;" text="قائمة الايداع" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="81.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="ادخل المبلغ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtDeposit" alignment="CENTER" focusColor="#75b8cc" layoutX="22.0" layoutY="80.0" prefHeight="40.0" prefWidth="189.0" promptText="من فضلك ادخل المبلغ" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#75b8cc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="dateDeposit" defaultColor="#080394" layoutX="18.0" layoutY="180.0" prefHeight="36.0" prefWidth="198.0" style="-fx-border-color: #fff; -fx-font-size: 13px; -fx-font-weight: bold;">
+                     <padding>
+                        <Insets left="65.0" right="10.0" />
+                     </padding>
+                  </JFXDatePicker>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="178.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="تاريخ الايداع" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnDeposit" buttonType="RAISED" layoutX="119.0" layoutY="277.0" onAction="#btnDepositAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حفظ" textFill="#cd0909">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="btnDisplayWithdrawal" buttonType="RAISED" layoutX="202.0" layoutY="592.0" onAction="#btnDisplayWithdrawalAction" prefHeight="45.0" prefWidth="215.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="عرض قائمة السحب">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDisplayDeposit" buttonType="RAISED" layoutX="986.0" layoutY="586.0" onAction="#btnDisplayDepositAction" prefHeight="45.0" prefWidth="215.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="عرض قائمة الايداع">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="600.0" layoutY="592.0" onAction="#btnBackAction" prefHeight="45.0" prefWidth="215.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="رجوع">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="510.0" layoutY="235.0" prefHeight="241.0" prefWidth="377.0" style="-fx-background-color: #99CFDF; -fx-background-radius: 50px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="48.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="الاجمالى" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtTotal" alignment="CENTER" focusColor="#75b8cc" layoutX="14.0" layoutY="48.0" prefHeight="40.0" prefWidth="189.0" promptText="ادخل المبلغ الاجمالى" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#75b8cc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnTotal" buttonType="RAISED" layoutX="70.0" layoutY="121.0" onAction="#btnTotalAction" prefHeight="45.0" prefWidth="238.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="حفظ المبلغ الاجمالى" textFill="#cd0909">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="lblPrice" alignment="CENTER" layoutX="95.0" layoutY="179.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

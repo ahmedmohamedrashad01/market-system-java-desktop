@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" style="-fx-background-color: #67B8D0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.CreateUserController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="570.0" layoutY="34.0" prefHeight="40.0" prefWidth="245.0" style="-fx-border-color: #fff;" text="انشاء حساب مستخدم جديد" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" iconName="CREDIT_CARD" layoutX="56.0" layoutY="335.0" size="3em" />
+            <FontAwesomeIcon fill="WHITE" iconName="CALENDAR" layoutX="61.0" layoutY="542.0" size="3em" />
+            <JFXDatePicker fx:id="txtDate" defaultColor="WHITE" disable="true" layoutX="161.0" layoutY="511.0" prefHeight="36.0" prefWidth="198.0" style="-fx-border-color: #fff; -fx-font-size: 13px; -fx-font-weight: bold;">
+               <padding>
+                  <Insets left="65.0" right="10.0" />
+               </padding>
+            </JFXDatePicker>
+            <FontAwesomeIcon fill="WHITE" iconName="FEMALE" layoutX="247.0" layoutY="470.0" size="3em" />
+            <FontAwesomeIcon fill="WHITE" iconName="MALE" layoutX="61.0" layoutY="470.0" size="3em" />
+            <JFXCheckBox fx:id="cbxMale" checkedColor="#ff0c0c" layoutX="143.0" layoutY="439.0" onAction="#cbxMaleAction" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 20px;" text="ذكر" textFill="#322e2e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="cbxFemale" checkedColor="#ff0c0c" layoutX="290.0" layoutY="439.0" onAction="#cbxFemaleAction" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 20px;" text="أنثي" textFill="#322e2e">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXTextField fx:id="txtIdNumber" alignment="CENTER" layoutX="145.0" layoutY="304.0" prefHeight="36.0" prefWidth="219.0" promptText="رقم البطاقه الشخصيه" style="-fx-background-color: #ffffff22; -fx-border-color: #fff; -fx-text-fill: #fff;" unFocusColor="#5cb2d6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIcon fill="WHITE" iconName="USER" layoutX="61.0" layoutY="141.0" size="3em" />
+            <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="145.0" layoutY="110.0" prefHeight="36.0" prefWidth="219.0" promptText="ادخل اسم المستخدم" style="-fx-background-color: #ffffff22; -fx-border-color: #fff; -fx-text-fill: #fff;" unFocusColor="#5cb2d6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIcon fill="WHITE" iconName="MOBILE" layoutX="61.0" layoutY="208.0" size="4em" />
+            <JFXTextField fx:id="txtMobile" alignment="CENTER" layoutX="145.0" layoutY="173.0" prefHeight="36.0" prefWidth="219.0" promptText="ادخل رقم الهاتف" style="-fx-background-color: #ffffff22; -fx-border-color: #fff; -fx-text-fill: #fff;" unFocusColor="#5cb2d6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIcon fill="WHITE" iconName="GLOBE" layoutX="58.0" layoutY="270.0" size="3em" />
+            <JFXTextField fx:id="txtAddress" alignment="CENTER" layoutX="145.0" layoutY="239.0" prefHeight="36.0" prefWidth="219.0" promptText="ادخل العنوان" style="-fx-background-color: #ffffff22; -fx-border-color: #fff; -fx-text-fill: #fff;" unFocusColor="#5cb2d6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <FontAwesomeIcon fill="WHITE" iconName="MONEY" layoutX="58.0" layoutY="406.0" size="3em" />
+            <JFXTextField fx:id="txtSallary" alignment="CENTER" layoutX="145.0" layoutY="375.0" prefHeight="36.0" prefWidth="219.0" promptText="ادخل الراتب" style="-fx-background-color: #ffffff22; -fx-border-color: #fff; -fx-text-fill: #fff;" unFocusColor="#5cb2d6">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="myTable" layoutX="390.0" layoutY="215.0" prefHeight="334.0" prefWidth="943.0" style="-fx-background-color: #67B8D0; -fx-border-color: #fff;">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="الرقم" />
+                <TableColumn fx:id="colName" prefWidth="196.0" text="اسم المستخدم" />
+                  <TableColumn fx:id="colMobile" prefWidth="108.0" text="رقم الهاتف" />
+                  <TableColumn fx:id="colAddress" prefWidth="149.0" text="العنوان" />
+                  <TableColumn fx:id="colIDNumber" prefWidth="151.0" text="رقم البطاقه الشخصيه" />
+                  <TableColumn fx:id="colSallary" prefWidth="82.0" text="الراتب" />
+                  <TableColumn fx:id="colGender" prefWidth="68.0" text="النوع" />
+                  <TableColumn fx:id="colDate" prefWidth="109.0" text="تاريخ الانشاء" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="73.0" layoutY="606.0" onAction="#btnSaveAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حفظ" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="225.0" layoutY="606.0" onAction="#btnBackAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="رجوع" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="1214.0" layoutY="606.0" onAction="#btnExitAction" prefHeight="45.0" prefWidth="116.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="خروج" textFill="#ff00009e">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="379.0" layoutY="606.0" onAction="#btnDeleteAction" prefHeight="45.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حذف الحساب" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" buttonType="RAISED" layoutX="991.0" layoutY="606.0" onAction="#btnEditAction" prefHeight="45.0" prefWidth="210.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="تعديل بيانات الحساب" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSaveEDit" buttonType="RAISED" layoutX="804.0" layoutY="606.0" onAction="#btnSaveEDitAction" prefHeight="45.0" prefWidth="174.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حفظ التعديل" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDisplayDeletedUsers" buttonType="RAISED" layoutX="570.0" layoutY="606.0" onAction="#btnDisplayDeletedUsersAction" prefHeight="45.0" prefWidth="219.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="الحسابات المحذوفه" textFill="#03112c">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXDatePicker fx:id="toDate" layoutX="409.0" layoutY="114.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="الى تاريخ" />
+            <JFXDatePicker fx:id="fromDate" layoutX="709.0" layoutY="114.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="من تاريخ" />
+            <JFXButton fx:id="btnSearch" layoutX="581.0" layoutY="167.0" onAction="#btnSearchAction" prefHeight="28.0" prefWidth="128.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="بدأ البحث">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblQty" alignment="CENTER" layoutX="1077.0" layoutY="558.0" prefHeight="28.0" prefWidth="87.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSearchByName" layoutX="1201.0" layoutY="113.0" onAction="#btnSearchByNameAction" prefHeight="28.0" prefWidth="128.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="بحث بالاسم">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="#92b3c6" layoutX="937.0" layoutY="107.0" prefHeight="42.0" prefWidth="245.0" promptText="ادخل اسم المستهلك" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnBank" buttonType="RAISED" layoutX="1039.0" layoutY="34.0" onAction="#btnBankAction" prefHeight="45.0" prefWidth="230.0" ripplerFill="#bdc60c" style="-fx-background-color: #2472A6; -fx-background-radius: 50px;" text="الدخول لنظام البنك" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

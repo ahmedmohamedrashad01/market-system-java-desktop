@@ -1,0 +1,18 @@
+#rootPane{
+  
+}
+
+.root{
+    
+   
+   
+}
+
+.button:hover {
+    -fx-background-color:FFB900;
+    
+}
+
+.button:hover .text{
+    -fx-fill: black;
+}

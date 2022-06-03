@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.DepositController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="751.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="589.0" layoutY="36.0" prefHeight="40.0" prefWidth="245.0" style="-fx-border-color: #fff;" text="الودائع" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="827.0" layoutY="155.0" prefHeight="355.0" prefWidth="377.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <children>
+                  <Label alignment="CENTER" layoutX="89.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: #fff;" text="قائمة الايداع" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="81.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="ادخل المبلغ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtDeposit" alignment="CENTER" focusColor="#75b8cc" layoutX="22.0" layoutY="80.0" prefHeight="40.0" prefWidth="189.0" promptText="من فضلك ادخل المبلغ" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#75b8cc">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="dateDeposit" defaultColor="#080394" layoutX="18.0" layoutY="180.0" prefHeight="36.0" prefWidth="198.0" style="-fx-border-color: #fff; -fx-font-size: 13px; -fx-font-weight: bold;">
+                     <padding>
+                        <Insets left="65.0" right="10.0" />
+                     </padding>
+                  </JFXDatePicker>
+                  <Label alignment="CENTER" layoutX="227.0" layoutY="178.0" prefHeight="40.0" prefWidth="136.0" style="-fx-border-color: #fff;" text="تاريخ الايداع" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="119.0" layoutY="277.0" onAction="#btnSaveAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="حفظ" textFill="#cd0909">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <TableView fx:id="myTable" layoutX="210.0" layoutY="207.0" prefHeight="303.0" prefWidth="377.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="الرقم" />
+                <TableColumn fx:id="colPrice" prefWidth="133.0" text="المبلغ" />
+                  <TableColumn fx:id="colDate" prefWidth="167.0" text="تاريخ الايداع" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnEdit" buttonType="RAISED" layoutX="324.0" layoutY="563.0" onAction="#btnEditAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="تعديل" textFill="#cd0909">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="641.0" layoutY="563.0" onAction="#btnBackAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="رجوع" textFill="#cd0909">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="945.0" layoutY="563.0" onAction="#btnExitAction" prefHeight="45.0" prefWidth="141.0" ripplerFill="WHITE" style="-fx-background-color: #ffffff30; -fx-background-radius: 50px;" text="خروج" textFill="#cd0909">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXDatePicker fx:id="toDate" layoutX="169.0" layoutY="124.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="الى تاريخ" />
+            <JFXDatePicker fx:id="fromDate" layoutX="441.0" layoutY="124.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="من تاريخ" />
+            <JFXButton fx:id="btnSearch" layoutX="330.0" layoutY="162.0" onAction="#btnSearchAction" prefHeight="28.0" prefWidth="128.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="بدأ البحث">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblPrice" alignment="CENTER" layoutX="289.0" layoutY="519.0" prefHeight="28.0" prefWidth="128.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

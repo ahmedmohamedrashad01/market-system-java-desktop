@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: #67B8D0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.Display_purchasesController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root10" prefHeight="751.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="574.0" layoutY="22.0" prefHeight="40.0" prefWidth="245.0" style="-fx-border-color: #fff;" text="عرض جميع مشتريات البيض" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBack" layoutX="247.0" layoutY="587.0" onAction="#btnBackAction" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="رجوع" textFill="#860e0e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" layoutX="983.0" layoutY="587.0" onAction="#btnExitAction" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="خروج" textFill="#860e0e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXDatePicker fx:id="toDate" layoutX="450.0" layoutY="84.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="الى تاريخ" />
+            <JFXDatePicker fx:id="fromDate" layoutX="752.0" layoutY="84.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="191.0" promptText="من تاريخ" />
+            <JFXButton fx:id="btnSearch" layoutX="632.0" layoutY="131.0" onAction="#btnSearchAction" prefHeight="28.0" prefWidth="128.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="بدأ البحث">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="myTable" layoutX="54.0" layoutY="161.0" prefHeight="364.0" prefWidth="1267.0" style="-fx-background-color: #92B3C6; -fx-border-color: #fff;">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="115.0" text="الرقم" />
+                <TableColumn fx:id="colName" prefWidth="214.0" text="اسم التاجر / الشركه" />
+                  <TableColumn fx:id="coleSize" prefWidth="116.0" text="حجم المنتج" />
+                  <TableColumn fx:id="colColor" prefWidth="114.0" text="اللون" />
+                  <TableColumn fx:id="colQty" prefWidth="117.0" text="الكميه" />
+                  <TableColumn fx:id="colMobile" prefWidth="165.0" text="رقم الهاتف" />
+                  <TableColumn fx:id="colDate" prefWidth="168.0" text="تاريخ الشراء" />
+                  <TableColumn fx:id="colPrice" prefWidth="127.0" text="السعر" />
+                  <TableColumn fx:id="colUser" prefWidth="129.0" text="اسم المستخدم" />
+              </columns>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TableView>
+            <Label fx:id="lblQty" alignment="CENTER" layoutX="625.0" layoutY="546.0" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrice" alignment="CENTER" layoutX="1071.0" layoutY="546.0" prefHeight="28.0" prefWidth="128.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDelete" layoutX="504.0" layoutY="587.0" onAction="#btnDeleteAction" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="حذف" textFill="#860e0e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" layoutX="802.0" layoutY="587.0" onAction="#btnEditAction" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="تعديل" textFill="#860e0e">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="cbx" focusColor="#92b3c6" layoutX="62.0" layoutY="78.0" onAction="#cbxAction" prefHeight="40.0" prefWidth="141.0" promptText="اختر الحجم ليتم عرضه" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXComboBox fx:id="cbxType" focusColor="#92b3c6" layoutX="229.0" layoutY="78.0" onAction="#cbxTypeAction" prefHeight="40.0" prefWidth="141.0" promptText="اختر النوع" style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </JFXComboBox>
+            <JFXButton fx:id="btnSearchByName" layoutX="1193.0" layoutY="95.0" onAction="#btnSearchByNameAction" prefHeight="28.0" prefWidth="128.0" style="-fx-background-radius: 50px; -fx-background-color: #ffffff22;" text="بحث بالاسم">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtName" alignment="CENTER" focusColor="#92b3c6" layoutX="943.0" layoutY="89.0" prefHeight="42.0" prefWidth="245.0" promptText="ادخل اسم المستهلك" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

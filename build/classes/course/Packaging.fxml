@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" style="-fx-background-color: #67B8D0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.PackagingController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root5" prefHeight="751.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="611.0" layoutY="26.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="التعبئه والتغليف" textFill="#bc0303">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBack" layoutX="282.0" layoutY="622.0" onAction="#btnBackAction" prefHeight="61.0" prefWidth="139.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="رجوع" textFill="#d31f1f">
+               <font>
+                  <Font name="Book Antiqua Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="25.0" layoutY="84.0" prefHeight="208.0" prefWidth="1333.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="27.0">
+               <children>
+                  <Pane layoutX="869.0" layoutY="3.0" prefHeight="199.0" prefWidth="450.0" style="-fx-background-color: #ffffff66;">
+                     <children>
+                        <JFXButton fx:id="btnPurchasesWhitePapers" layoutX="247.0" layoutY="100.0" onAction="#btnPurchasesWhitePapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المشتريات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSalesWhitePapers" layoutX="17.0" layoutY="100.0" onAction="#btnSalesWhitePapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المبيعات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="143.0" layoutY="7.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="ورق جورنال عادى" textFill="#543434">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Line endX="68.0" endY="-54.0" layoutX="789.0" layoutY="60.0" startX="68.0" startY="141.0" stroke="RED" strokeWidth="3.0" />
+                  <Pane layoutX="439.0" layoutY="3.0" prefHeight="199.0" prefWidth="406.0" style="-fx-background-color: #ffffff66;">
+                     <children>
+                        <JFXButton fx:id="btnPurchasesNormalImportedPapers" layoutX="203.0" layoutY="100.0" onAction="#btnPurchasesNormalImportedPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المشتريات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnsalesNormalExportedPapers" layoutX="14.0" layoutY="100.0" onAction="#btnsalesNormalExportedPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المبيعات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="118.0" layoutY="6.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="ورق مستورد عادى" textFill="#543434">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="4.0" prefHeight="199.0" prefWidth="399.0" style="-fx-background-color: #ffffff66;">
+                     <children>
+                        <JFXButton fx:id="btnPurchasesNormalLocalPapers" layoutX="208.0" layoutY="100.0" onAction="#btnPurchasesNormalLocalPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المشتريات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnsalesOfNormalLocalPapers" layoutX="8.0" layoutY="100.0" onAction="#btnsalesOfNormalLocalPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المبيعات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="118.0" layoutY="6.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="ورق محلى" textFill="#543434">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Line endX="68.0" endY="-65.0" layoutX="355.0" layoutY="71.0" startX="68.0" startY="127.0" stroke="RED" strokeWidth="3.0" />
+               </children>
+               <effect>
+                  <Lighting diffuseConstant="0.81" specularConstant="0.81" specularExponent="40.0" surfaceScale="10.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Pane>
+            <Line endX="906.0" layoutX="451.0" layoutY="308.0" startX="-408.0" stroke="#a5ab00" strokeWidth="3.0" />
+            <Label alignment="CENTER" layoutX="618.0" layoutY="320.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="أوراق جورنال" textFill="#5b4d02">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="283.0" layoutY="414.0" prefHeight="208.0" prefWidth="863.0" style="-fx-background-color: #ffffff22; -fx-border-color: #fff;" AnchorPane.bottomAnchor="129.0">
+               <children>
+                  <Pane layoutX="447.0" layoutY="5.0" prefHeight="199.0" prefWidth="406.0" style="-fx-background-color: #ffffff66;">
+                     <children>
+                        <JFXButton fx:id="btnPurchasesJornalImportedPapers" layoutX="204.0" layoutY="100.0" onAction="#btnPurchasesJornalImportedPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المشتريات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSalesOfJImportedornal" layoutX="11.0" layoutY="100.0" onAction="#btnSalesOfJImportedornalAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المبيعات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="118.0" layoutY="6.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="ورق جورنال مستورد" textFill="#543434">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="8.0" layoutY="5.0" prefHeight="199.0" prefWidth="399.0" style="-fx-background-color: #ffffff66;">
+                     <children>
+                        <JFXButton fx:id="btnLastSalesJornal" layoutX="10.0" layoutY="100.0" onAction="#btnLastSalesJornalAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المبيعات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnPurchasesJornalLocalPapers" layoutX="203.0" layoutY="100.0" onAction="#btnPurchasesJornalLocalPapersAction" prefHeight="60.0" prefWidth="186.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="المشتريات">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </JFXButton>
+                        <Label alignment="CENTER" layoutX="118.0" layoutY="6.0" prefHeight="40.0" prefWidth="165.0" style="-fx-border-color: #fff;" text="ورق جورنال محلى" textFill="#543434">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Line endX="68.0" endY="-65.0" layoutX="358.0" layoutY="73.0" startX="68.0" startY="127.0" stroke="RED" strokeWidth="3.0" />
+               </children>
+               <effect>
+                  <Lighting diffuseConstant="0.81" specularConstant="0.81" specularExponent="40.0" surfaceScale="10.0">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Pane>
+            <JFXButton fx:id="btnBack1" layoutX="1007.0" layoutY="622.0" onAction="#btnBackAction" prefHeight="61.0" prefWidth="139.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="خروج" textFill="#d31f1f">
+               <font>
+                  <Font name="Book Antiqua Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <Line endX="673.0" layoutX="471.0" layoutY="608.0" startX="-188.0" stroke="#a5ab00" strokeWidth="3.0" />
+            <JFXButton fx:id="btnDisplayNormalWhitePapers" layoutX="454.0" layoutY="623.0" onAction="#btnDisplayNormalWhitePapersAction" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="عرض جميع المشتريات">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDisplayS" layoutX="741.0" layoutY="623.0" onAction="#DisplaySAction" prefHeight="60.0" prefWidth="236.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="عرض المبيعات">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

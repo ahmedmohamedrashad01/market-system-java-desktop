@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" style="-fx-background-color: #67B8D0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="course.SalesOfImportedJornalPapersController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="root" prefHeight="730.0" prefWidth="1385.0" style="-fx-background-color: #67B8D0;">
+         <children>
+            <Label alignment="CENTER" layoutX="431.0" layoutY="41.0" prefHeight="45.0" prefWidth="507.0" style="-fx-background-color: #ffffff22; -fx-border-color: #016C6C;" text="بيع كميه جديده من ورق الجورنال المستورد" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="285.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="الكميه" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="437.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="التاريخ" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="517.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="السعر" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQty" alignment="CENTER" focusColor="#92b3c6" layoutX="318.0" layoutY="285.0" prefHeight="42.0" prefWidth="261.0" promptText="ادخل الكميه المطلوبه" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPrice" alignment="CENTER" focusColor="#92b3c6" layoutX="321.0" layoutY="517.0" prefHeight="42.0" prefWidth="261.0" promptText="ادخل سعر البيع" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnSave" layoutX="588.0" layoutY="599.0" onAction="#btnSaveAction" prefHeight="70.0" prefWidth="193.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-text-fill: #961919;" text="حفظ" textFill="#961919">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBack" layoutX="125.0" layoutY="599.0" onAction="#btnBackAction" prefHeight="70.0" prefWidth="193.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-text-fill: #961919;" text="رجوع" textFill="#961919">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExit" layoutX="1070.0" layoutY="599.0" onAction="#btnExitAction" prefHeight="70.0" prefWidth="193.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-text-fill: #961919;" text="خروج" textFill="#961919">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="362.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="الهاتف" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMobile" alignment="CENTER" focusColor="#92b3c6" layoutX="318.0" layoutY="362.0" prefHeight="42.0" prefWidth="261.0" promptText="ادخل رقم الهاتف" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="txtDate" defaultColor="RED" disable="true" layoutX="321.0" layoutY="444.0" prefHeight="42.0" prefWidth="255.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px; -fx-font-size: 14px; -fx-font-weight: bold;">
+               <padding>
+                  <Insets left="85.0" right="10.0" />
+               </padding>
+            </JFXDatePicker>
+            <Pane layoutX="1025.0" layoutY="196.0" prefHeight="339.0" prefWidth="300.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="lblResult" layoutX="26.0" layoutY="14.0" prefHeight="42.0" prefWidth="248.0" style="-fx-border-color: #fff;">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton fx:id="btnClear" layoutX="14.0" layoutY="78.0" onAction="#btnClearAction" prefHeight="39.0" prefWidth="131.0" style="-fx-border-color: #fff;" text="مسح">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlusdivminus" layoutX="160.0" layoutY="78.0" onAction="#btnPlusdivminusAction" prefHeight="39.0" prefWidth="131.0" style="-fx-border-color: #fff;" text="+/-">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSeven" layoutX="11.0" layoutY="134.0" onAction="#btnSevenAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="7">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEight" layoutX="86.0" layoutY="134.0" onAction="#btnEightAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="8">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnNine" layoutX="157.0" layoutY="134.0" onAction="#btnNineActiion" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="9">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnOne" layoutX="11.0" layoutY="232.0" onAction="#btnOneAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="1">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPlus" layoutX="230.0" layoutY="134.0" onAction="#btnPlusAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="+">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMinus" layoutX="230.0" layoutY="183.0" onAction="#btnMinusAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="-">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFour" layoutX="11.0" layoutY="183.0" onAction="#btnFourAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="4">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnFive" layoutX="86.0" layoutY="183.0" onAction="#btnFiveAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSix" layoutX="157.0" layoutY="183.0" onAction="#btnSixAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="6">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMultiaplication" layoutX="230.0" layoutY="232.0" onAction="#btnMultiaplicationAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="x">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnTwo" layoutX="86.0" layoutY="232.0" onAction="#btnTwoAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="2">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnThree" layoutX="157.0" layoutY="232.0" onAction="#btnThreeAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEqual" layoutX="11.0" layoutY="280.0" onAction="#btnEqualAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="=">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDiv" layoutX="230.0" layoutY="280.0" onAction="#btnDivAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="÷">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnZero" layoutX="86.0" layoutY="280.0" onAction="#btnZeroAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text="0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPoint" layoutX="157.0" layoutY="280.0" onAction="#btnPointAction" prefHeight="39.0" prefWidth="60.0" style="-fx-border-color: #fff;" text=".">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <Line endX="140.0" layoutX="132.0" layoutY="65.0" startX="-104.0" stroke="#940000" />
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="145.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="اسم المستهلك" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtName" alignment="CENTER" focusColor="#92b3c6" layoutX="321.0" layoutY="145.0" prefHeight="42.0" prefWidth="261.0" promptText="ادخل اسم المستهلك" style="-fx-text-fill: #fff; -fx-background-color: #ffffff22; -fx-background-radius: 50px;" unFocusColor="#92b3c6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" layoutX="834.0" layoutY="210.0" prefHeight="42.0" prefWidth="169.0" style="-fx-background-color: #ffffff22; -fx-border-color: #000;" text="مقاس الورق" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="cbx25" layoutX="323.0" layoutY="216.0" onAction="#cbx25Action" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="25x30">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="cbx30" layoutX="414.0" layoutY="216.0" onAction="#cbx30Action" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="30x40">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="cbx40" layoutX="502.0" layoutY="216.0" onAction="#cbx40Action" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #ffffff22; -fx-background-radius: 50px;" text="40x70">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
